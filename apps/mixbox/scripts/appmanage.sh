@@ -6,7 +6,7 @@ appname="$2"
 
 get_app_byurl () {
 	logsh "【Tools】" "下载插件安装文件..."
-	wgetsh "${mbtmp}/${appname}.tar.gz" "$mburl/appstore/${appname}_${model}.tar.gz"
+	wgetsh "${mbtmp}/${appname}.tar.gz" "${mburl}/appstore/${appname}_${model}.tar.gz"
 	if [ $? -eq 1 ]; then
 		logsh "【Tools】" "文件下载失败！"
 		exit
