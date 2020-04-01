@@ -6,7 +6,7 @@ source /etc/mixbox/bin/base
 logsh "【Tools】" "正在更新工具箱程序... "
 rm -rf ${mbtmp}/mixbox.tar.gz
 rm -rf ${mbtmp}/mixbox
-wgetsh "${mbtmp}/mixbox.tar.gz" "$mburl/appstore/mixbox_${model}.tar.gz" > /dev/null 2>&1
+wgetsh "${mbtmp}/mixbox.tar.gz" "${mburl}/appstore/mixbox_${model}.tar.gz" > /dev/null 2>&1
 [ $? -ne 0 ] && logsh "【Tools】" "工具箱文件下载失败！"  && exit
 
 logsh "【Tools】" "解压工具箱文件"
